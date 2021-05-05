@@ -18,6 +18,18 @@ const symbiotes = {
             checked,
         }
     }
+  },
+  opened: {
+    set: (state, { id } = {}) => {
+        const opened = state.opened.includes(id)
+            ? state.opened.filter((x) => x !== id)
+            : [...state.opened, id];
+
+        return {
+            ...state,
+            opened,
+        }
+    }
   }
 };
 

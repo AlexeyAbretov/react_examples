@@ -1,7 +1,7 @@
 import React from 'react';
 import { Provider } from 'react-redux';
 
-import { CheckboxListContainer } from 'features';
+import { CounterContainer, GroupListContainer } from 'features';
 
 import createStore from './store';
 
@@ -9,6 +9,7 @@ const store = createStore();
 
 export const App = () => (
     <Provider store={store}>
-        <CheckboxListContainer />
+        <CounterContainer />
+        <GroupListContainer />
     </Provider>
 )

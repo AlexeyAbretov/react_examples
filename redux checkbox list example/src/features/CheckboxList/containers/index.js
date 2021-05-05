@@ -1,1 +1,1 @@
-export { CheckboxListContainer } from './CheckboxListContainer';
+export { GroupListContainer } from './GroupListContainer';

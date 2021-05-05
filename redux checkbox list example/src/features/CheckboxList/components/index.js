@@ -1,1 +1,1 @@
-export { CheckboxList } from './CheckboxList';
+export { CheckboxListNode } from './CheckboxListNode';
