@@ -15,6 +15,14 @@ module.exports = {
         exclude: /node_modules/,
         use: ['babel-loader'],
       },
+      {
+        test: /\.(png|jpg|gif|svg)$/i,
+        use: [
+          {
+            loader: 'url-loader'
+          },
+        ],
+      },
     ],
   },
   resolve: {

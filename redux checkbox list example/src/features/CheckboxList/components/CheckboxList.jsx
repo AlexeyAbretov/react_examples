@@ -1,7 +1,9 @@
 import React from 'react';
 
 import { Box } from 'ui';
-import { BasicCheckbox, BasicSpan } from 'ui/atoms/Basics';
+import { BasicCheckbox, BasicImage, BasicSpan } from 'ui/atoms/Basics';
+
+import Icon from './images/briefcase.svg';
 
 export const CheckboxList = ({ items = [], onChecked } = {}) => (
     <Box>
@@ -10,6 +12,7 @@ export const CheckboxList = ({ items = [], onChecked } = {}) => (
                 onChange={() => onChecked({ id: x.id })}
                 checked={x.isChecked}
             />
+            <BasicImage src={Icon} />
             <BasicSpan>
                 {x.title}
             </BasicSpan>
