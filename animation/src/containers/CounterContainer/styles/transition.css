@@ -1,0 +1,17 @@
+.my-css-enter {
+    background-color: transparent;
+}
+
+.my-css-enter-active {
+    background-color: green;
+    transition: background-color 300ms;
+}
+
+.my-css-exit {
+    background-color: green;
+}
+
+.my-css-exit-active {
+    background-color: transparent;
+    transition: background-color 300ms;
+}
