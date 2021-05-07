@@ -5,17 +5,25 @@ import { BasicCheckbox, BasicImage, BasicSpan } from 'ui/atoms/Basics';
 
 import Icon from './images/briefcase.svg';
 
+const Row = React.memo(({ id, isChecked, title, onChecked }) => <Box width="400px">
+    <BasicCheckbox
+        onChange={() => onChecked({ id })}
+        checked={isChecked}
+    />
+    <BasicImage src={Icon} />
+    <BasicSpan>
+        {title}
+    </BasicSpan>
+</Box>);
+
 export const CheckboxList = ({ items = [], onChecked } = {}) => (
-    <Box>
-        {items?.map((x) => <Box key={x.id}>
-            <BasicCheckbox
-                onChange={() => onChecked({ id: x.id })}
-                checked={x.isChecked}
-            />
-            <BasicImage src={Icon} />
-            <BasicSpan>
-                {x.title}
-            </BasicSpan>
-        </Box>)}
-    </Box>
+    <>
+        {items?.map((x) => <Row
+            key={x.id}
+            id={x.id}
+            title={x.title}
+            isChecked={x.isChecked}
+            onChecked={onChecked}
+        />)}
+    </>
 )
